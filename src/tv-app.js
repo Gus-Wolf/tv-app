@@ -3,6 +3,7 @@ import { LitElement, html, css } from 'lit';
 import '@shoelace-style/shoelace/dist/components/dialog/dialog.js';
 import '@shoelace-style/shoelace/dist/components/button/button.js';
 import "./tv-channel.js";
+import "@lrnwebcomponents/video-player/video-player.js";
 
 export class TvApp extends LitElement {
   // defaults
@@ -22,6 +23,7 @@ export class TvApp extends LitElement {
       name: { type: String },
       source: { type: String },
       listings: { type: Array },
+      channels: {type: Object},
     };
   }
   // LitElement convention for applying styles JUST to our element
@@ -29,9 +31,17 @@ export class TvApp extends LitElement {
     return [
       css`
       :host {
-        display: block;
-        margin: 16px;
-        padding: 16px;
+     
+      }
+      .grid-container{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 16px;}
+       .left-item{
+        grid-column: 1;
+        color:red;}
+       .right-item{
+        grid-column: 2;
       }
       `
     ];
@@ -39,28 +49,33 @@ export class TvApp extends LitElement {
   // LitElement rendering template of your element
   render() {
     return html`
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="left-item">
+          <video-player source="https://www.youtube.com/watch?v=LrS7dqokTLE" accent-color="orange" dark track="https://haxtheweb.org/files/HAXshort.vtt"></video-player>
+        </div>  
+        <tv-channel title="HAX: Wordpress Killer" presenter="Bryan Ollendyke">
+          TV Metada placeholder
+        </tv-channel>
+      </div>
+      <div class="right-item">
       <h2>${this.name}</h2>
       ${
         this.listings.map(
           (item) => html`
-            <tv-channel 
+            <tv-channel
               title="${item.title}"
               presenter="${item.metadata.author}"
               @click="${this.itemClick}"
+              class="listing"
             >
             </tv-channel>
           `
         )
       }
-      <div>
-        <!-- video -->
-        <!-- discord / chat - optional -->
+
       </div>
-      <!-- dialog -->
-      <sl-dialog label="Dialog" class="dialog">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        <sl-button slot="footer" variant="primary" @click="${this.closeDialog}">Close</sl-button>
-      </sl-dialog>
+    </div>
     `;
   }
 
