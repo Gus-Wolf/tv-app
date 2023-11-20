@@ -52,7 +52,7 @@ export class TvApp extends LitElement {
     <div class="grid-container">
       <div class="grid-item">
         <div class="left-item">
-          <video-player source="https://www.youtube.com/watch?v=LrS7dqokTLE" accent-color="orange" dark track="https://haxtheweb.org/files/HAXshort.vtt"></video-player>
+          <video-player source="https://www.youtube.com/watch?v=blfaXtOmxTI&t=166s" accent-color="orange" dark track="https://haxtheweb.org/files/HAXshort.vtt"></video-player>
         </div>  
         <tv-channel title="HAX: Wordpress Killer" presenter="Bryan Ollendyke">
           TV Metada placeholder
