@@ -23,7 +23,8 @@ export class TvApp extends LitElement {
       name: { type: String },
       source: { type: String },
       listings: { type: Array },
-      channels: {type: Object},
+      channels: { type: Object },
+      active: { type: String },
     };
   }
   // LitElement convention for applying styles JUST to our element
@@ -31,17 +32,46 @@ export class TvApp extends LitElement {
     return [
       css`
       :host {
-     
+        display: grid;
+        margin: 16px;
+        padding: 16px;
       }
-      .grid-container{ 
+      .grid-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 16px;}
-       .left-item{
+      }
+      .left-item{
         grid-column: 1;
-        color:red;}
-       .right-item{
+        margin-top: 50px;
+      }
+      .right-item{
         grid-column: 2;
+        width: 200px;
+        margin-left: 110px;
+        margin-top: 15px;
+        height: 72.5vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .listing{
+        margin: 10px;
+      }
+      .slideclicker {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        gap: 375px;
+        margin-bottom: 20px;
+      }
+      .previous-slide {
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
+      }
+      .next-slide {
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
       }
       `
     ];
@@ -49,13 +79,13 @@ export class TvApp extends LitElement {
   // LitElement rendering template of your element
   render() {
     return html`
-    <div class="grid-container">
+      <div class="grid-container">
       <div class="grid-item">
         <div class="left-item">
-          <video-player source="https://www.youtube.com/watch?v=blfaXtOmxTI&t=166s" accent-color="orange" dark track="https://haxtheweb.org/files/HAXshort.vtt"></video-player>
+          <video-player source="https://www.youtube.com/watch?v=blfaXtOmxTI&t=166s" accent-color="orange" dark track="https://haxtheweb.org/files/HAXshort.vtt"></video-player> 
         </div>  
-        <tv-channel title="HAX: Wordpress Killer" presenter="Bryan Ollendyke">
-          TV Metada placeholder
+        <tv-channel title="NCAA LAX goals" presenter="">
+          These are the top 10 goals in NCAA LAX history
         </tv-channel>
       </div>
       <div class="right-item">
@@ -63,19 +93,30 @@ export class TvApp extends LitElement {
       ${
         this.listings.map(
           (item) => html`
-            <tv-channel
+            <tv-channel 
               title="${item.title}"
               presenter="${item.metadata.author}"
               @click="${this.itemClick}"
               class="listing"
+              timecode = "${item.metadata.timecode}"
             >
             </tv-channel>
           `
         )
+      
       }
-
       </div>
+        <!-- dialog -->
+        <sl-dialog label="Dialog" class="dialog">
+          Section 
+        <sl-button slot="footer" variant="primary" @click="${this.closeDialog}">Close</sl-button>
+        </sl-dialog>
     </div>
+    <div class="slideclicker">
+      <button class = "previous-slide"> Previous Slide</button>
+      <button class = "next-slide"> Next Slide</button>
+    </div>
+
     `;
   }
 
@@ -86,8 +127,12 @@ export class TvApp extends LitElement {
 
   itemClick(e) {
     console.log(e.target);
-    const dialog = this.shadowRoot.querySelector('.dialog');
-    dialog.show();
+    // this will give you the current time so that you can progress what's active based on it playing
+this.shadowRoot.querySelector('video-player').shadowRoot.querySelector("a11y-media-player").media.currentTime
+// this forces the video to play
+this.shadowRoot.querySelector('video-player').shadowRoot.querySelector('a11y-media-player').play()
+// this forces the video to jump to this point in the video via SECONDS
+this.shadowRoot.querySelector('video-player').shadowRoot.querySelector('a11y-media-player').seek(e.target.timecode)
   }
 
   // LitElement life cycle for when any property changes

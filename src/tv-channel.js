@@ -16,6 +16,8 @@ export class TvChannel extends LitElement {
   static get properties() {
     return {
       title: { type: String },
+      video: {type: String},
+      timecode: { type: Number },
       presenter: { type: String },
     };
   }
@@ -36,6 +38,8 @@ export class TvChannel extends LitElement {
     return html`
       <div class="wrapper">
         <h3>${this.title}</h3>
+        <h3>${this.video}</h3>
+        <h3>${this.timecode}</h3>
         <h4>${this.presenter}</h4>
         <slot></slot>
       </div>  

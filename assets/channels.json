@@ -15,12 +15,12 @@
         "slug": "hax-wp-killer",
         "order": 0,
         "parent": null,
-        "title": "HAX: Wordpress Killer",
+        "title": "Goal 10 ",
         "description": "The future we need, not the future we have.",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=9MT-BNuUCpM",
-          "timecode": 0,
-          "author":"Bryan Ollendyke",
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 105,
+          "author":"",
           "created": 1697033522,
           "updated": 1697034021
         }
@@ -32,16 +32,153 @@
         "slug": "this-is-water",
         "order": 0,
         "parent": null,
-        "title": "This, is water",
+        "title": "Goal 9 ",
         "description": "What is water?",
         "metadata": {
-          "source": "https://www.youtube.com/watch?v=eC7xzavzEKY",
-          "timecode": 45,
-          "author":"David Foster Wallace",
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 129,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 8",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 150,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 7",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 176,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 6",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 200,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 5",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 238,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 4",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 267,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 3",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 295,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 2",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 323,
+          "author":"",
+          "created": 1697033522,
+          "updated": 1697034021
+        }
+      },
+      {
+        "id": "item-123-456-789",
+        "indent": 0,
+        "location": "hax-wp-killer.html",
+        "slug": "hax-wp-killer",
+        "order": 0,
+        "parent": null,
+        "title": "Goal 1",
+        "description": "The future we need, not the future we have.",
+        "metadata": {
+          "source": "https://www.youtube.com/watch?v=K2csY1cMpfA&t=386s&ab_channel=MNcompsJR",
+          "timecode": 346,
+          "author":"",
           "created": 1697033522,
           "updated": 1697034021
         }
       }
+      
     ]
   }
 }
