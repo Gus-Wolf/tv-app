@@ -35,6 +35,7 @@ export class TvApp extends LitElement {
         display: grid;
         margin: 16px;
         padding: 16px;
+        overflow-x: hidden;
       }
       .grid-container{
         display: grid;
@@ -99,6 +100,7 @@ export class TvApp extends LitElement {
               @click="${this.itemClick}"
               class="listing"
               timecode = "${item.metadata.timecode}"
+              image = "${item.metadata.image}"
             >
             </tv-channel>
           `

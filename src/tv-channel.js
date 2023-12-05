@@ -7,6 +7,7 @@ export class TvChannel extends LitElement {
     super();
     this.title = '';
     this.presenter = '';
+    this.image = '';
   }
   // convention I enjoy using to define the tag's name
   static get tag() {
@@ -18,6 +19,7 @@ export class TvChannel extends LitElement {
       title: { type: String },
       video: {type: String},
       timecode: { type: Number },
+      image: { type: String },
       presenter: { type: String },
     };
   }
@@ -29,14 +31,15 @@ export class TvChannel extends LitElement {
       }
       .wrapper {
         padding: 16px;
-        background-color: #eeeeee;
+        width: 200px;
+        background-size: cover;
       }
     `;
   }
   // LitElement rendering template of your element
   render() {
     return html`
-      <div class="wrapper">
+      <div class="wrapper" style = "background-image:url(${this.image})">
         <h3>${this.title}</h3>
         <h3>${this.video}</h3>
         <h3>${this.timecode}</h3>
