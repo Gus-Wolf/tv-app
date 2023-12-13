@@ -2,18 +2,19 @@
 import { LitElement, html, css } from 'lit';
 
 export class TvChannel extends LitElement {
-  // defaults
+  
   constructor() {
     super();
     this.title = '';
     this.presenter = '';
     this.image = '';
+    this.description = "";
   }
-  // convention I enjoy using to define the tag's name
+
   static get tag() {
     return 'tv-channel';
   }
-  // LitElement convention so we update render() when values change
+  
   static get properties() {
     return {
       title: { type: String },
@@ -21,17 +22,29 @@ export class TvChannel extends LitElement {
       timecode: { type: Number },
       image: { type: String },
       presenter: { type: String },
+      index: { type: Number },
+      active: { type: Boolean , reflect: true},
+      description: { type: String },
     };
   }
+
   // LitElement convention for applying styles JUST to our element
   static get styles() {
     return css`
       :host {
-        display: inline-flex;
+        display: block;
+        padding: 15px;
+        margin-top: 12px;
+        border-radius: 8px;
+        background-color: grey;
+        transition: background-color 0.3s ease;
+      }
+      :host([active]){
+        background-color: blue;
       }
       .wrapper {
-        padding: 16px;
-        width: 200px;
+        padding: 25px;
+        color: white;
         background-size: cover;
       }
     `;
@@ -42,7 +55,6 @@ export class TvChannel extends LitElement {
       <div class="wrapper" style = "background-image:url(${this.image})">
         <h3>${this.title}</h3>
         <h3>${this.video}</h3>
-        <h3>${this.timecode}</h3>
         <h4>${this.presenter}</h4>
         <slot></slot>
       </div>  
